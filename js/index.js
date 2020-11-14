@@ -11,7 +11,7 @@ $('.banner_btn li').on('click', function () {
   $(this).addClass('active');
 });
 
-//자동 슬라이드1
+//자동 슬라이드
 let num = 0;
 function slide() {
   num = (num + 1) % 3;//1,2,3,0,1..
@@ -40,10 +40,10 @@ wrapperMenu.addEventListener('click', function () {
         wrapperMenu.classList.add('open');
         $('header').addClass('active');
         $('header h1').addClass('active');
-        $('nav').animate({ left: '0%' }, 1000, 'easeOutCubic').addClass('show');
+        $('nav').animate({ right: '0%' }, 1000, 'easeOutCubic').addClass('show');
     } else {
         wrapperMenu.classList.remove('open');
-        $('nav').animate({ left: '-100%' }, 1000, 'easeOutCubic').removeClass('show');
+        $('nav').animate({ right: '-100%' }, 1000, 'easeOutCubic').removeClass('show');
         $('header').removeClass('active');
         $('header h1').removeClass('active');
         
